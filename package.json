@@ -1,0 +1,17 @@
+{
+  "name": "scheduler",
+  "productName": "Scheduler",
+  "version": "1.0.0",
+  "description": "Schedul' and more",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager ."
+  },
+  "author": "Antoine Donat-Goninet",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^27.0.4",
+    "electron-packager": "^17.1.2"
+  }
+}
