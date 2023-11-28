@@ -1,0 +1,10 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    border: 1px solid gray;
+}
+
+.grid-element {
+    border: 1px solid gray;
+    height: 20px;
+}

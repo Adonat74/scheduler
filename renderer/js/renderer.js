@@ -1,12 +1,15 @@
-let count = 0;
-
-document.querySelector("#clicked").innerHTML = `You clicked ${count} times.`;
-
-let button = document.querySelector("#plusOne");
+const element = require('categories')
 
 
-button.addEventListener("click", () => {
-    count++
-    document.querySelector("#clicked").innerHTML = `You clicked ${count} times.`;
-});
 
+
+
+let gridElement = "";
+
+for (let i = 0; i < 252; i++) {
+     gridElement += `
+        <div class="grid-element"></div>
+    `
+}
+
+document.querySelector(".grid-container").innerHTML = gridElement;
