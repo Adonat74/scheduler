@@ -58,7 +58,7 @@ body {
 }
 
 .selected {
-    border: solid 1px black;
+    box-shadow:inset 0px 0px 0px 1px rgb(0, 0, 0);
 }
 
 
