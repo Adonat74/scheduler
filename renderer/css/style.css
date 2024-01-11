@@ -57,7 +57,9 @@ body {
     margin-right: 7px;
 }
 
-
+.selected {
+    border: solid 1px black;
+}
 
 
 

@@ -27,7 +27,7 @@ document.querySelector(".grid-container").innerHTML = gridElement;
 let catElement = "";
 
 categories.forEach((cat) => {
-    catElement += `<div class="cat-element" data-color="${cat.color}" data-cat="${cat.category}">
+    catElement += `<div id="${cat.color}" class="cat-element unselected" data-color="${cat.color}" data-cat="${cat.category}">
         <div class="color ${cat.color}"></div>
         <p>${cat.category}</p>
     </div>`
@@ -41,9 +41,17 @@ let selectedCat = {
 };
 
 document.querySelectorAll(".cat-element").forEach((element) => {
+    
     element.addEventListener("click", () => {
         selectedCat.category = element.dataset.cat;
         selectedCat.color = element.dataset.color;
+        
+        document.querySelectorAll(".cat-element").forEach((elem) => {
+            elem.classList.replace("selected", "unselected")
+        });
+
+        
+        element.classList.replace("unselected", "selected");
     });
 });
 
