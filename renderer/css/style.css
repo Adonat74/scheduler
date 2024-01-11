@@ -47,7 +47,7 @@ body {
 .cat-element {
     display: flex;
     align-items: center;
-
+    cursor: pointer;
 }
 
 .color {
@@ -87,9 +87,12 @@ body {
     border: 1px solid gray;
 }
 
-.grid-element {
+#grid-element {
     border: 1px solid gray;
-    height: 15px;
+    height: 13px;
+    text-align: center;
+    max-width: 113px;
+    cursor: pointer;
 }
 
 

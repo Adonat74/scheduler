@@ -18,7 +18,7 @@ let gridElement = "";
 
 for (let i = 0; i < 216; i++) {
      gridElement += `
-        <div class="grid-element"></div>
+        <input type="text" id="grid-element" class="white"></input>
     `
 }
 document.querySelector(".grid-container").innerHTML = gridElement;
@@ -49,13 +49,13 @@ document.querySelectorAll(".cat-element").forEach((element) => {
 
 
 
-document.querySelectorAll(".grid-element").forEach((element) => {
+document.querySelectorAll("#grid-element").forEach((element) => {
     element.addEventListener("click", () => {
         if (selectedCat.category === "delete") {
-            element.classList.add(selectedCat.color);
-            element.innerHTML = "";
+            element.classList.replace(element.className, selectedCat.color);
+            element.value = "";
         } else {
-            element.classList.add(selectedCat.color);
+            element.classList.replace(element.className, selectedCat.color);
             element.innerHTML = selectedCat.category;
         }
         
