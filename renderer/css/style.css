@@ -91,7 +91,7 @@ body {
     width: 690px;
 }
 
-#grid-element {
+.grid-element {
     border: 1px solid gray;
     text-align: center;
     max-width: 113px;

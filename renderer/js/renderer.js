@@ -14,14 +14,41 @@ const categories = [{
 
 
 
+
+
+
+
+
 let gridElement = "";
 
 for (let i = 0; i < 216; i++) {
      gridElement += `
-        <input type="text" id="grid-element" class="white"></input>
+        <input type="text" class="grid-element white"></input>
     `
 }
 document.querySelector(".grid-container").innerHTML = gridElement;
+
+
+
+document.querySelectorAll(".grid-element").forEach((element) => {
+    element.addEventListener("click", () => {
+        let lastClassName = element.classList[ element.classList.length-1 ];
+        if (selectedCat.category === "delete") {
+            element.classList.replace(lastClassName, selectedCat.color);
+            element.value = "";
+        } else {
+            element.classList.replace(lastClassName, selectedCat.color);
+            element.innerHTML = selectedCat.category;
+        }
+        
+    });
+});
+
+
+
+
+
+
 
 
 let catElement = "";
@@ -57,15 +84,3 @@ document.querySelectorAll(".cat-element").forEach((element) => {
 
 
 
-document.querySelectorAll("#grid-element").forEach((element) => {
-    element.addEventListener("click", () => {
-        if (selectedCat.category === "delete") {
-            element.classList.replace(element.className, selectedCat.color);
-            element.value = "";
-        } else {
-            element.classList.replace(element.className, selectedCat.color);
-            element.innerHTML = selectedCat.category;
-        }
-        
-    });
-});
