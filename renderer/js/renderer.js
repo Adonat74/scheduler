@@ -13,33 +13,78 @@ const categories = [{
 }];
 
 
+let selectedCat = {
+    category: "delete", color: "white"
+};
+
+
+
+let gridElement = localStorage.getItem('gridElement');
 
 
 
 
+if (!gridElement) {
+    gridElement = "";
+    for (let i = 0; i < 216; i++) {
+        gridElement += `
+           <input id="${i}" type="text" class="grid-element white"></input>
+       `
+    }
+    document.querySelector(".grid-container").innerHTML = gridElement;
+}
+
+document.querySelector(".grid-container").innerHTML = gridElement;
 
 
-let gridElement = "";
+
 
 for (let i = 0; i < 216; i++) {
-     gridElement += `
-        <input type="text" class="grid-element white"></input>
-    `
+
+    let element = document.getElementById(`${i}`);
+
+
+    element.value = getSavedValue(`${i}`);
+
+    element.addEventListener("change", () => {
+        saveValue(element);
+    });
+    
 }
-document.querySelector(".grid-container").innerHTML = gridElement;
+
+function saveValue(e) {
+    var id = e.id;  
+    var val = e.value; 
+    localStorage.setItem(id, val);
+}
+
+function getSavedValue(e) {
+    if (!localStorage.getItem(e)) {
+        return "";
+    }
+
+    return localStorage.getItem(e);
+}
+
 
 
 
 document.querySelectorAll(".grid-element").forEach((element) => {
     element.addEventListener("click", () => {
+
+
         let lastClassName = element.classList[ element.classList.length-1 ];
+
+
         if (selectedCat.category === "delete") {
             element.classList.replace(lastClassName, selectedCat.color);
-            element.value = "";
         } else {
             element.classList.replace(lastClassName, selectedCat.color);
-            element.innerHTML = selectedCat.category;
         }
+
+        gridElement = String(document.querySelector(".grid-container").innerHTML);
+
+        localStorage.setItem('gridElement', gridElement);
         
     });
 });
@@ -63,9 +108,6 @@ document.querySelector(".cat-container").innerHTML = catElement;
 
 
 
-let selectedCat = {
-    category: "delete", color: "white"
-};
 
 document.querySelectorAll(".cat-element").forEach((element) => {
     
