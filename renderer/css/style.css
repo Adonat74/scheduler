@@ -5,7 +5,7 @@ body {
 }
 
 .scheduler {
-    min-width: 500px;
+    min-width: 750px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,9 +78,9 @@ body {
 }
 
 .hours > p {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.85rem;
-    height: 38px;
+    height: 40.1px;
     margin: 0;
     text-justify: center;
 }
@@ -96,29 +96,26 @@ body {
 .grid-container {
     display: grid;
     grid-template-columns: 115px 115px 115px 115px 115px 115px;
-    border: 1px solid gray;
-    height: 684px;
+    border: 1px solid rgb(103, 103, 103);
+    height: 722px;
     width: 690px;
 }
 
 .grid-element {
-    border: 1px solid gray;
+    border: 1px solid rgb(103, 103, 103);
     text-align: center;
     max-width: 113px;
     cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-family: Montserrat, serif, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.5px;
 }
 
 
 
 
 @media screen and (min-width: 768px) { 
-
-    .cat-container {
-        display: flex;
-        width: 692px;
-        justify-content: space-between;
-    }
-
     .grid {
         width: auto;
     }
