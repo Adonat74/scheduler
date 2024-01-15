@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Montserrat, serif, Arial, Helvetica, sans-serif;
+    background-color: #eeeeee;
 }
 
 .scheduler {
@@ -20,19 +21,19 @@ body {
 
 
 .green {
-    background-color: green;
+    background-color: #42b883;
 }
 .yellow {
-    background-color: yellow;
+    background-color: #ffc93c;
 }
 .red {
-    background-color: red;
+    background-color: #e84a5f;
 }
 .blue {
-    background-color: blue;
+    background-color: #00bbf0;
 }
 .gray {
-    background-color: gray;
+    background-color: #a393eb;
 }
 .white {
     background-color: white;
@@ -42,23 +43,32 @@ body {
 .cat-container {
     display: flex;
     justify-content: space-between;
+    margin: 6px 0;
 }
 
 .cat-element {
     display: flex;
     align-items: center;
     cursor: pointer;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.cat-element > p {
+    margin: 0;
 }
 
 .color {
-    width: 30px; 
-    height: 10px;
-    border: solid 2px black;
+    width: 36px; 
+    height: 16px;
     margin-right: 7px;
+    border-radius: 2px;
 }
 
 .selected {
-    box-shadow:inset 0px 0px 0px 1px rgb(0, 0, 0);
+    background-color: rgb(212, 212, 212);
+    box-shadow: 5px 5px rgb(154, 154, 154);
 }
 
 

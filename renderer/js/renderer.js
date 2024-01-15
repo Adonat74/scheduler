@@ -113,7 +113,8 @@ categories.forEach((cat) => {
 });
 document.querySelector(".cat-container").innerHTML = catElement;
 
-
+// préentour la catégorie white de base
+document.getElementById("white").classList.replace("unselected", "selected");
 
 
 document.querySelectorAll(".cat-element").forEach((element) => {
