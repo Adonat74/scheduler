@@ -40,7 +40,7 @@ document.querySelector(".grid-container").innerHTML = gridElement;
 
 
 
-
+// delete local storage and refresh the page on click
 document.querySelector(".deleteAll").addEventListener("click", () => {
     localStorage.clear();
     window.location.reload();
