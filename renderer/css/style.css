@@ -17,6 +17,29 @@ body {
     grid-template-columns: 30px auto;
 }
 
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.deleteAll {
+    margin-left: 50px;
+    font-family: Montserrat, serif, Arial, Helvetica, sans-serif;
+    border: none;
+    font-size: 1.2rem;
+    height: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 6px;
+    color: white;
+    background-color: #e84a5f;
+    box-shadow: 5px 5px rgb(125, 40, 40);
+    text-decoration: underline;
+    text-decoration-thickness: 2.5px;
+    text-underline-offset: 5px;
+}
+
 
 
 

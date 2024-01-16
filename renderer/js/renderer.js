@@ -24,7 +24,6 @@ let selectedCat = {
 let gridElement = localStorage.getItem('gridElement');
 
 
-
 // si la variable est vide on l'initialise avec 216 inputs de type text
 if (!gridElement) {
     gridElement = "";
@@ -38,6 +37,14 @@ if (!gridElement) {
 // on insert la string-html contenant les inputs dans le grid container
 document.querySelector(".grid-container").innerHTML = gridElement;
 
+
+
+
+
+document.querySelector(".deleteAll").addEventListener("click", () => {
+    localStorage.clear();
+    window.location.reload();
+});
 
 
 
@@ -60,7 +67,7 @@ function getSavedValue(e) {
     return localStorage.getItem(e);
 }
 
-// boucle qui permet de d'enregistrer à chaques changements la value de chaques inputs individuellement
+// boucle qui permet de d'enregistrer à chaques changement la value de chaques inputs individuellement
 for (let i = 0; i < 216; i++) {
 
     let element = document.getElementById(`${i}`);
